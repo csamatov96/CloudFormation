@@ -2,7 +2,7 @@ Resources:
     MyS3Bucket: #Logical ID
         Type: AWS::S3::Bucket
         Properties:
-            BucketName: "HelloWorldFromJC"  #STRING required 
+            BucketName: "hello-world-from-jc"  #STRING required - NO UPPERCASE
             AccessControl: "PublicRead"   
             WebsiteConfiguration:
                 IndexDocument: index.html
