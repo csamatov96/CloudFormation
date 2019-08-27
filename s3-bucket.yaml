@@ -7,6 +7,7 @@ Resources:
             WebsiteConfiguration:
                 IndexDocument: index.html
             Tags: 
-              "Key": "Created_By"
-              "value": "JC" 
+              - 
+                Key: "Created_BY"
+                Value: "JC"
 
