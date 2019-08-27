@@ -11,7 +11,7 @@ Resources:
                 ToPort: '22'
                 IpProtocol: tcp #f* indentation must be the same for all 
             Tags:
-                - Key: Name
-                  Value: !Join [ "  ", [EC2, Instance, with, Fn, Join] ] #intrinsic function 
+                - Key: "Name" #without quotes
+                  Value: !Join [ "  ", [Sec, Group, by, JC, Test] ] #intrinsic function 
                 
                 
