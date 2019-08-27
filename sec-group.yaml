@@ -12,6 +12,6 @@ Resources:
                 IpProtocol: tcp #f* indentation must be the same for all 
             Tags:
                 - Key: Name
-                Value: !Join [ "  ", [EC2, Instance, with, Fn, Join] ] #intrinsic function 
+                  Value: !Join [ "  ", [EC2, Instance, with, Fn, Join] ] #intrinsic function 
                 
                 
