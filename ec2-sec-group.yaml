@@ -14,7 +14,9 @@ Resources:
   MySecurityGroup: #Logical ID 
         Type: AWS::EC2::SecurityGroup
         Properties:
-            GroupDescription: "Enable SSH access via port 22"  
+            GroupDescription: "Enable SSH access via port 22 + 80 -> Egress : Exit"  
+            VpcId:
+              Ref: "vpc-3b472741"
             GroupName: "My-Custom-Sec-Group"
             SecurityGroupIngress:
               - IpProtocol: tcp #
