@@ -6,4 +6,5 @@ Resources:
       ImageId: ami-02eac2c0129f6376b #centos
       Tags:
         - Key: Name
-          Value: A simple example 
+          #Value: A simple example 
+          Value: !Join [ "  ", [EC2, Instance, with, Fn, Join] ] #intrinsic function 
