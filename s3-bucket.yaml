@@ -1,0 +1,9 @@
+Resources:
+    MyS3Bucket: #Logical ID
+        Type: AWS::S3::Bucket
+        Properties:
+            BucketName: HelloWorldFromJC
+            AccessControl: PublicRead
+            WebsiteConfiguration:
+                IndexDocument: index.html
+
