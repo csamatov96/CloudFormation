@@ -11,7 +11,7 @@ Resources:
       SecurityGroups: # linking Sec-Group to Ec2 
         - !Ref MySecurityGroup 
 
-  MySecurityGroup: #Logical ID 
+  InstanceSecurityGroup: #Logical ID 
         Type: AWS::EC2::SecurityGroup
         Properties:
             GroupDescription: "Enable SSH access via port 22 + 80 -> Egress : Exit"  
