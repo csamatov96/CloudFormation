@@ -2,9 +2,14 @@ Resources:
     MySecurityGroup: #Logical ID 
         Type: AWS::EC2::SecurityGroup
         Properties:
-            GroupDescription: Enable SSH access via port 22 
+            GroupDescription: "Enable SSH access via port 22"  
+            GroupName: "My-Custom-Sec-Group"
             SecurityGroupIngress:
-                -IpProtocol: tcp #f* indentation must be the same for all 
+                CidrIp: 0.0.0.0/0
+                Description: "only SSH"
                 FromPort: '22'
                 ToPort: '22'
-                CidrIp: 0.0.0.0/0
+                IpProtocol: tcp #f* indentation must be the same for all 
+                
+                
+                
