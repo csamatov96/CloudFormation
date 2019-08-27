@@ -4,7 +4,7 @@ Resources:
     Properties:
       InstanceType: t2.micro
       ImageId: ami-02eac2c0129f6376b #centos
-      KeyName: !Ref myMacBookPro #
+      #KeyName: !Ref myMacBookPro #
       Tags:
         - Key: Name
           #Value: A simple example 
