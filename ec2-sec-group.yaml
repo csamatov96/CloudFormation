@@ -1,0 +1,38 @@
+Resources:
+  Ec2Instance: #Logical ID 
+    Type : "AWS::EC2::Instance"
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-02eac2c0129f6376b #centos
+      Tags:
+        - Key: "Name"
+          Value: !Join [ "  ", [EC2, Instance, with, Fn, Join] ] #intrinsic function 
+      
+      SecurityGroups: # linking Sec-Group to Ec2 
+        - !Ref MySecurityGroup 
+
+  MySecurityGroup: #Logical ID 
+        Type: AWS::EC2::SecurityGroup
+        Properties:
+            GroupDescription: "Enable SSH access via port 22"  
+            GroupName: "My-Custom-Sec-Group"
+            SecurityGroupIngress:
+              - IpProtocol: tcp #
+                CidrIp: 0.0.0.0/0
+                Description: "only SSH"
+                FromPort: '22'
+                ToPort: '22'
+              - IpProtocol: tcp
+                CidrIp: 0.0.0.0/0
+                FromPort: 80
+                ToPort: 80
+            SecurityGroupEgress:
+              - IpProtocol: tcp
+                FromPort: 80
+                ToPort: 80
+                CidrIp: 0.0.0.0/0
+            Tags:
+                - Key: "Name" #
+                  Value: !Join [ "  ", [Sec, Group, by, JC, Test] ] #intrinsic function 
+                
+                
