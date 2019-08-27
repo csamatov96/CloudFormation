@@ -2,8 +2,10 @@ Resources:
     MyS3Bucket: #Logical ID
         Type: AWS::S3::Bucket
         Properties:
-            BucketName: HelloWorldFromJC
-            AccessControl: PublicRead
+            BucketName: "HelloWorldFromJC"  #STRING required 
+            AccessControl: "PublicRead"   
             WebsiteConfiguration:
                 IndexDocument: index.html
+            Tags: 
+              - Just For Fun
 
