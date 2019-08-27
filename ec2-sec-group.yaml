@@ -16,7 +16,7 @@ Resources:
         Properties:
             GroupDescription: "Enable SSH access via port 22 + 80 -> Egress : Exit"  
             VpcId:
-              Ref: "vpc-3b472741"
+              Ref: "default VPC"
             GroupName: "My-Custom-Sec-Group"
             SecurityGroupIngress:
               - IpProtocol: tcp #
